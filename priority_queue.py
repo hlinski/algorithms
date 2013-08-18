@@ -34,7 +34,7 @@ class PriorityQueue(object):
         array.append(element)
         self.swim(len(array) - 1)
 
-    def remove(self):
+    def take(self):
         max = self.array[1]
         self.exch(1, len(self.array) - 1)
         del self.array[len(self.array) - 1]
@@ -50,5 +50,5 @@ queue.add(4)
 queue.add(5)
 queue.add(6)
 print array
-print queue.remove()
+print queue.take()
 print array
